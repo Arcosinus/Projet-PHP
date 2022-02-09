@@ -10,6 +10,9 @@
 *.userosscache
 *.sln.docstates
 
+#Customs
+configBdd.php
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
