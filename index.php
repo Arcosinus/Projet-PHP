@@ -9,6 +9,7 @@
     <body>
         <?php
         include_once("Ressource/navbar.php");
+        include_once("Ressource/Profil.php");
         ?>
     </body>
 </html>
