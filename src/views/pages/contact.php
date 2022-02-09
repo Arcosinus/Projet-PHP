@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<p>CONTACT</p>
-</body>
-</html>
+<form>
+    <h2>Profil</h2>
+        <p>$Pseudo</p>
+        <button method="get" name="modif" value="true">Modifier</button>
+</form>

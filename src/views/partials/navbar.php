@@ -3,8 +3,8 @@
     <?php
         //Define each name associated with an URL
         $pages = array(
-            'home' => 'home',
-            'contact' => 'contact',
+            'home' => 'categorie',
+            'contact' => 'profil',
             'login' => 'login',
             'signup' => 'signup'
         );
