@@ -9,6 +9,20 @@
     <body>
         <?php
         include_once("Ressource/navbar.php");
+        if (!(empty($_GET["prof"])))
+        {
+            if ($_GET["prof"] == "true")
+            {
+            include_once("Pages/Profil.php");
+            }
+        }
+        if (!(empty($_GET["modif"])))
+        {
+            if ($_GET["modif"] == "true")
+            {
+            include_once("Pages/Modif.php");
+            }
+        }
         ?>
     </body>
 </html>
