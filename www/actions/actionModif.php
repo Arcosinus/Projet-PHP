@@ -8,7 +8,7 @@ require_once '/Users/arxcoz/Downloads/Projet PHP/src/db.php';
     ]);
     while (($user = $querry->fetch(PDO::FETCH_ASSOC))) {
         if ($_GET["oldpass"] == $user["mdpUser"]){
-            $sql = 'UPDATE users SET userName = :userName and mdpUser = :mdpUser WHERE idUser = :idUser';
+            $sql = 'UPDATE users SET userName = :userName , mdpUser = :mdpUser WHERE idUser = :idUser';
             $query = $db->prepare($sql);
             $query->execute([
                 ':idUser' => $_SESSION['idUser'],
