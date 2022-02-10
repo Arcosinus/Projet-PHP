@@ -4,5 +4,7 @@
     <button>Playstation 5</button>
     <button>Xbox Series X</button>
     </div>
-
+    <?php
+    include 'actions/actionWatchPost.php';
+    ?>
 </div>

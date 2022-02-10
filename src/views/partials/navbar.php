@@ -12,14 +12,14 @@
 
         foreach ($pages as $url => $label) {
           ?>
-          <li><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></li>
+          <button><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></button>
           <?php
           };
           ?>
         <?php
         if(!empty($_SESSION['id'])){
         ?>
-        <li><a href="actions/actionLogout.php">Déconnexion</a></li>
+        <button><a href="actions/actionLogout.php">Déconnexion</a></button>
         <?php
         };
         ?>

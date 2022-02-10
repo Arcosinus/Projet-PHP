@@ -13,11 +13,13 @@ session_start();
     <body>
     <?php
  
-    if ($p == "login"){
+    if ($p == "home"){
+        include '../src/views/pages/home.php';
+    } else if ($p == "login"){
         include '../src/views/pages/login.php';
-    } elseif ($p == "signup") {
+    } else if ($p == "signup") {
         include '../src/views/pages/signup.php';
-    } elseif($p == "contact"){
+    } else if($p == "contact"){
         include '../src/views/pages/contact.php';
     }
     elseif ($p == "logout") {
