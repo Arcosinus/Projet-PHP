@@ -10,7 +10,6 @@
             'createPost' => 'createPost'
         );
         $p = (isset($_GET['p'])) ? $_GET['p'] : "";
-        
         if(empty($_SESSION['idUser'])){
           foreach ($pages as $url => $label) {
             if($label != 'createPost'){
