@@ -7,7 +7,7 @@ require_once '../../src/db.php';
 $email = $_POST['mail'];
 $mdp = $_POST['mdp'];
 
-$sql ='SELECT * FROM Users WHERE email = :email and mdp = :mdp';
+$sql ='SELECT * FROM users WHERE emailUser = :email and mdpUser = :mdp';
 
 $querry = $db->prepare($sql);
 
@@ -21,8 +21,8 @@ if($user == false){
     header("Location: /index.php?p=login&erreur=1");
 }
 foreach ($user as $key => $value) {
-    if($key == 'id'){
-        $_SESSION['id'] = $value;
+    if($key == 'idUser'){
+        $_SESSION['idUser'] = $value;
         header("Location: /index.php?p=login&successful=1");
     }
 }

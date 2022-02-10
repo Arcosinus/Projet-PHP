@@ -11,7 +11,7 @@ else {
     $adresse_mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
 };
-$sql = 'INSERT INTO Users(email, mdp) VALUES (:email, :mdp)';
+$sql = 'INSERT INTO users(emailUser, mdpUser) VALUES (:email, :mdp)';
 
 $querry = $db->prepare($sql);
 
