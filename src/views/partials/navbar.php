@@ -15,7 +15,7 @@
           foreach ($pages as $url => $label) {
             if($label != 'createPost'){
               ?>
-              <li><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></li>
+              <button><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></button>
               <?php
             }
             };
@@ -26,12 +26,12 @@
             foreach ($pages as $url => $label) {
               if($label != 'login' && $label != 'signup'){
                 ?>
-                <li><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></li>
+                <button><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></button>
                 <?php
               }
               };
           ?>
-          <li><a href="/actions/actionLogout.php">déconnexion</a></li>
+          <button><a href="/actions/actionLogout.php">déconnexion</a></button>
           <?php
           }
         }

@@ -10,16 +10,19 @@ if (empty($_POST['titlePost']) && empty($_POST['postContent'])){
 else {
     $titlePost = $_POST['titlePost'];
     $postContent = $_POST['postContent'];
-    $mediaPost = $_POST['mediaPost'];
+    $categorie = $_POST['categories'];
 };
-$sql = 'INSERT INTO posts(titlePost, postContent, mediaPost) VALUES (:titlePost, :postContent, :mediaPost)';
+$sql = 'INSERT INTO post(titlePost, postContent, categories, idUser, upVotes, downVotes) VALUES (:titlePost, :postContent, :categories, :idUser, :upVotes, :downVotes)';
 
 $querry = $db->prepare($sql);
 
 $querry->execute([
     ':titlePost' => $titlePost,
     ':postContent' => $postContent,
-    ':mediaPost' => $mediaPost
+    ':categories' => $categorie,
+    ':idUser' => $_SESSION['idUser'],
+    ':upVotes' => 0,
+    ':downVotes' => 0
 ]);
 
 header("Location: /index.php?p=createPost&successful=1");
