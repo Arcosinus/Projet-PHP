@@ -33,12 +33,10 @@ session_start();
     {
         include 'actions/actionLogout.php';
     }
-    else if ($p == "create") 
-    {
+    elseif ($p == "createPost") {
         include '../src/views/pages/createPost.php';
     }
-    else
-    {
+    else{
         include '../src/views/pages/home.php';
     };
     ?>

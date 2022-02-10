@@ -7,21 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-<p>Créer un post</p>
-<form action="actions/actionPost.php" method="GET" >
-    <label for="">Console :</label>
-    <input type="text" name ="console" placeholder="Console"> <br>
-    <label for="">Jeu :</label>
-    <input type="text" name = "jeu" placeholder="Jeu"> <br>
-    <label for="">Commentaire :</label> <br>
-    <textarea type="text" name = "contenue" placeholder="Commentaire"> </textarea> <br>
-    <input type="submit"> 
+<p>Post creation</p>
+<form action="actions/actionPost.php" method="POST" >
+    <!-- Titre du post -->
+    <label for="">Titre :</label>
+    <input type="text" name ="titlePost" placeholder=""> <br>
+
+    <!-- Catégories du jeu -->
+    <label for="">Categories :</label>
+    <input type="text" name="categories" id="" placeholder=""><br>
+
+    <!-- Contenu du post -->
+    <label for="">Post content :</label>
+    <textarea name="postContent" id="" cols="30" rows="10"></textarea> <br>
+
+    <!-- Image facultative (A VOIR SI ON IMPLEMENTE) -->
+    <label for="">Image :</label>
+    <input type="img" name="mediaPost" id="" placeholder="Lien d'une image (facultatif)"><br>
+
+    <input type="submit">
 </form>
 <?php
 $erreur = (isset($_GET['erreur'])) ? $_GET['erreur'] : "";
 if($erreur == '1'){
 ?>
-<p>veuillez rentrer des champs valide</p>
+<p>veuillez rentrer des champs valides</p>
 <?php
 };
 ?>
@@ -29,10 +39,11 @@ if($erreur == '1'){
 $successful = (isset($_GET['successful'])) ? $_GET['successful'] : "";
 if($successful == '1'){
 ?>
-<p>vous avez créer un compte avec succès</p>
-
+<p>vous avez créez un post avec succès</p>
 <?php
 };
+
 ?>
+
 </body>
 </html>
