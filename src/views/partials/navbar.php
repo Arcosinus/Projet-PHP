@@ -6,7 +6,8 @@
             'home' => 'categorie',
             'contact' => 'profil',
             'login' => 'login',
-            'signup' => 'signup'
+            'signup' => 'signup',
+            'create' => "create"
         );
         $p = (isset($_GET['p'])) ? $_GET['p'] : "";
 
@@ -20,7 +21,7 @@
         if(!empty($_SESSION['idUser'])){
         ?>
         <button><a href="actions/actionLogout.php">déconnexion</a></button>
-        <button><a href="action/actionPost">creer un post</a></button>
+        <button><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?>>creer un post</a></button>
         <?php
         };
         ?>

@@ -13,19 +13,32 @@ session_start();
     <body>
     <?php
  
-    if ($p == "home"){
+    if ($p == "home")
+    {
         include '../src/views/pages/home.php';
-    } else if ($p == "login"){
+    } 
+    else if ($p == "login")
+    {
         include '../src/views/pages/login.php';
-    } else if ($p == "signup") {
+    } 
+    else if ($p == "signup") 
+    {
         include '../src/views/pages/signup.php';
-    } else if($p == "contact"){
+    } 
+    else if($p == "contact")
+    {
         include '../src/views/pages/contact.php';
     }
-    elseif ($p == "logout") {
+    else if ($p == "logout") 
+    {
         include 'actions/actionLogout.php';
     }
-    else{
+    else if ($p == "create") 
+    {
+        include '../src/views/pages/createPost.php';
+    }
+    else
+    {
         include '../src/views/pages/home.php';
     };
     ?>
