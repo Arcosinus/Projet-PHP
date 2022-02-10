@@ -13,6 +13,8 @@
     <input type="text" name ="mail" placeholder="Adresse mail"> <br>
     <label for="">Mot de passe :</label>
     <input type="text" name = "mdp" placeholder="Mot de passe"> <br>
+    <label for="">Username :</label>
+    <input type="text" name = "userName" placeholder="Username">
     <input type="submit"> 
 </form>
 <?php
