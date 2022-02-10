@@ -30,7 +30,7 @@ if($successful == '1'){
 <p>vous vous êtes connecté avec succès</p>
 <?php
 };
-var_dump($_SESSION['id']);
+//var_dump($_SESSION['id']);
 ?>
 
 </body>

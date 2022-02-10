@@ -6,22 +6,34 @@
             'home' => 'home',
             'contact' => 'contact',
             'login' => 'login',
-            'signup' => 'signup'
+            'signup' => 'signup',
+            'createPost' => 'createPost'
         );
         $p = (isset($_GET['p'])) ? $_GET['p'] : "";
-
-        foreach ($pages as $url => $label) {
+        
+        if(empty($_SESSION['idUser'])){
+          foreach ($pages as $url => $label) {
+            if($label != 'createPost'){
+              ?>
+              <li><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></li>
+              <?php
+            }
+            };
+        }else{
           ?>
-          <li><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></li>
           <?php
-          };
+          if(!empty($_SESSION['idUser'])){
+            foreach ($pages as $url => $label) {
+              if($label != 'login' && $label != 'signup'){
+                ?>
+                <li><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></li>
+                <?php
+              }
+              };
           ?>
-        <?php
-        if(!empty($_SESSION['idUser'])){
-        ?>
-        <li><a href="actions/actionLogout.php">déconnexion</a></li>
-        <li><a href="action/actionPost">creer un post</a></li>
-        <?php
-        };
+          <li><a href="/actions/actionLogout.php">déconnexion</a></li>
+          <?php
+          }
+        }
         ?>
 </ul>

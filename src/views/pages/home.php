@@ -10,12 +10,12 @@
 <body>
 <p>HOME</p>
 <?php
-$logout= (isset($_GET['logout'])) ? $_GET['logout'] : "";
-if($logout == '1'){
+// $logout= (isset($_GET['logout'])) ? $_GET['logout'] : "";
+// if($logout == '1'){
 ?>
-<p>vous avez été déconnecté</p>
+<!-- <p>vous avez été déconnecté</p> -->
 <?php
-};
+// };
 ?>
 </body>
 </html>

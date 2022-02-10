@@ -23,6 +23,9 @@ session_start();
     elseif ($p == "logout") {
         include 'actions/actionLogout.php';
     }
+    elseif ($p == "createPost") {
+        include '../src/views/pages/createPost.php';
+    }
     else{
         include '../src/views/pages/home.php';
     };
