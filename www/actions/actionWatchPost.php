@@ -11,7 +11,7 @@ require_once '/Users/arxcoz/Downloads/Projet PHP/src/db.php';
     <form><?php
     while (($user = $querry->fetch(PDO::FETCH_ASSOC))) {
         ?>
-        <button><a <?= $p == $user["jeu"] ? 'class="active"' : ""?> href="index.php?p=<?=$user["jeu"]?>" > <?=$user["categorie"] . ": " . $user["jeu"] . "-" . $user["contenue"]?> </a></button>
+        <button><a <?= $p == $user["titlePost"] ? 'class="active"' : ""?> href="index.php?p=<?=$user["titlePost"]?>" > <?=$user["categorie"] . ": " . $user["titlePost"] . "-" . substr($user["postContent"], 0, 25) . "..."?> </a></button>
         <?php
         };
         ?>
