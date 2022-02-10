@@ -2,11 +2,11 @@
 
 // tableau de config
 $config_db = [
-	'host' => '127.0.0.1',
-	'port' => '8889',
-	'dbname' => 'cours_php',
-	'user' => 'root',
-	'pass' => 'root'
+	'host' => '65.108.209.42',
+	'port' => '3306',
+	'dbname' => 'gameconseil',
+	'user' => 'gameconseil',
+	'pass' => 'CYwjvjsjBgbtbTvq'
 ];
 
 // Le DSN est une chaine de caractere composée d'une partie de la config (sans le user/password)
