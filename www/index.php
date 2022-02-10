@@ -36,6 +36,9 @@ session_start();
     elseif ($p == "createPost") {
         include '../src/views/pages/createPost.php';
     }
+    elseif ($p == "modif") {
+        include '../src/views/pages/modif.php';
+    }
     else{
         include '../src/views/pages/home.php';
     };

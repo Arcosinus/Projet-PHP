@@ -1,5 +1,7 @@
 <form>
     <h2>Profil</h2>
-        <p>$Pseudo</p>
-        <button method="get" name="modif" value="true">Modifier</button>
+        <?php
+        include 'actions/actionProfil.php';
+        ?>
+        <button method="get" name="p" value="modif">Modifier</button>
 </form>

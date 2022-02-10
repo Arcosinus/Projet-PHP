@@ -12,7 +12,7 @@
         $p = (isset($_GET['p'])) ? $_GET['p'] : "";
         if(empty($_SESSION['idUser'])){
           foreach ($pages as $url => $label) {
-            if($label != 'createPost'){
+            if($label != 'createPost' && $label != 'profil'){
               ?>
               <button><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></button>
               <?php
