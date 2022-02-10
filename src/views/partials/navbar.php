@@ -19,8 +19,8 @@
         <?php
         if(!empty($_SESSION['idUser'])){
         ?>
-        <li><a href="actions/actionLogout.php">déconnexion</a></li>
-        <li><a href="action/actionPost">creer un post</a></li>
+        <button><a href="actions/actionLogout.php">déconnexion</a></button>
+        <button><a href="action/actionPost">creer un post</a></button>
         <?php
         };
         ?>

@@ -1,25 +1,21 @@
 <?php
-require_once '../../src/db.php';
+require_once '/Users/arxcoz/Downloads/Projet PHP/src/db.php';
 ?>
+<div>
 <?php
-    $sql ='SELECT * FROM post WHERE categorie = :categorie and contenue = :contenu';
+    $sql ='SELECT * FROM post';
 
     $querry = $db->prepare($sql);
-
-    $querry->execute([
-        ':categorie'=> $categorie,
-        ':contenu'=> $contenu
-    ]);
-    
-    $user = $querry->fetch(PDO::FETCH_ASSOC);
-    if($user == false){
-        header("Location: /index.php?p=home&erreur=1");
-    }
-    echo $user;
-    echo $categorie;
-    echo $contenu;
-    foreach ($user as $i){
-        echo $categorie;
-        echo $contenu;
-    }
+    $querry->execute([]);
+    ?>
+    <form><?php
+    while (($user = $querry->fetch(PDO::FETCH_ASSOC))) {
+        ?>
+        <button><a <?= $p == $user["jeu"] ? 'class="active"' : ""?> href="index.php?p=<?=$user["jeu"]?>" > <?=$user["categorie"] . ": " . $user["jeu"] . "-" . $user["contenue"]?> </a></button>
+        <?php
+        };
+        ?>
+    </form>
+    <?php
 ?>
+</div>
