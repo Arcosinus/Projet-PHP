@@ -7,12 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-<p>SIGNUP</p>
+<p>Créer un post</p>
 <form action="actions/actionPost.php" method="GET" >
-    <label for="">Adresse mail :</label>
-    <input type="text" name ="mail" placeholder="Adresse mail"> <br>
-    <label for="">Mot de passe :</label>
-    <input type="text" name = "mdp" placeholder="Mot de passe"> <br>
+    <label for="">Console :</label>
+    <input type="text" name ="console" placeholder="Console"> <br>
+    <label for="">Jeu :</label>
+    <input type="text" name = "jeu" placeholder="Jeu"> <br>
+    <label for="">Commentaire :</label> <br>
+    <textarea type="text" name = "contenue" placeholder="Commentaire"> </textarea> <br>
     <input type="submit"> 
 </form>
 <?php
