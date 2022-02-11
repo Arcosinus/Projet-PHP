@@ -9,7 +9,6 @@ require_once '/Users/arxcoz/Downloads/Projet PHP/src/db.php';
             ':idpost' => $_GET['idpost'],
             ':downVotes' => $_GET['down']
         ]);
-        echo "go duck touself";
     }
     if (!(empty($_GET['up']))){
         $sql4 = 'UPDATE post SET upVotes = :upVotes WHERE idpost = :idpost';
@@ -18,7 +17,6 @@ require_once '/Users/arxcoz/Downloads/Projet PHP/src/db.php';
             ':idpost' => $_GET['idpost'],
             ':upVotes' => $_GET['up']
         ]);
-        echo "thank";
     }
     $first = true;
     $sql ='SELECT * FROM post WHERE titlePost = :titlePost';
