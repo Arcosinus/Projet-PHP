@@ -7,12 +7,13 @@
             'contact' => 'profil',
             'login' => 'login',
             'signup' => 'signup',
-            'createPost' => 'createPost'
+            'createPost' => 'createPost',
+            'admin' => 'admin'
         );
         $p = (isset($_GET['p'])) ? $_GET['p'] : "";
         if(empty($_SESSION['idUser'])){
           foreach ($pages as $url => $label) {
-            if($label != 'createPost' && $label != 'profil'){
+            if($label != 'createPost' && $label != 'profil' && $label != "admin"){
               ?>
               <button><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></button>
               <?php
@@ -23,10 +24,15 @@
           <?php
           if(!empty($_SESSION['idUser'])){
             foreach ($pages as $url => $label) {
-              if($label != 'login' && $label != 'signup'){
+              if($label != 'login' && $label != 'signup' && $label != 'admin'){
                 ?>
                 <button><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></button>
                 <?php
+              }
+              if($label == 'admin' && $_SESSION["admin"] == 1)
+              {?>
+                <button><a <?= $p == $url ? 'class="active"' : ""?> href="index.php?p=<?=$url?>" > <?=$label?> </a></button>
+              <?php
               }
               };
           ?>

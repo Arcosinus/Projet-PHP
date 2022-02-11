@@ -39,6 +39,9 @@ session_start();
     elseif ($p == "modif") {
         include '../src/views/pages/modif.php';
     }
+    elseif ($p == "admin") {
+        include '../src/views/pages/admin.php';
+    }
     else{
         include '../src/views/pages/home.php';
     };
