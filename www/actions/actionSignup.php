@@ -1,8 +1,6 @@
 <?php
 session_start();
 require_once '../../src/db.php';
-?>
-<?php
 if (empty($_POST['mail']) && empty($_POST['mdp']) && empty($_POST['userName'])){
     header("Location: /index.php?p=signup&erreur=1");
     exit;

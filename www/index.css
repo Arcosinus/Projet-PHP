@@ -1,0 +1,37 @@
+img{
+    height: 126px;
+}
+body{
+    background-image: url(thumb-1920-555496.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:#24B3AC;
+}
+footer{
+    position: absolute;
+    bottom:10px;
+    border: solid;
+    border-color: #24B3AC;
+    color: black;
+    background: gray;
+    width: 1000cm;
+    left: 0px;
+}
+ul{
+    position: absolute;
+    top:-10px;
+    border: solid;
+    color: black;
+    border-color:#24B3AC;
+    background: gray;
+    width: 1000cm;
+    left: 0px;
+}
+button{
+    background-color: gray;
+    border: hidden;
+    color: #24B3AC;
+}
+a{
+    color:#24B3AC;
+}
