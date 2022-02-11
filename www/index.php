@@ -42,6 +42,9 @@ session_start();
     elseif ($p == "admin") {
         include '../src/views/pages/admin.php';
     }
+    elseif ($p == "game") {
+        include '../src/views/pages/game.php';
+    }
     else{
         include '../src/views/pages/home.php';
     };

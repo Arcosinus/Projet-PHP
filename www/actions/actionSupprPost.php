@@ -1,17 +1,17 @@
 <?php
 require_once '/Users/arxcoz/Downloads/Projet PHP/src/db.php';
-if (!(empty($_GET['IdSupr'])))
+if (!(empty($_GET['IdSuprP'])))
 {
 
-    $sql = 'DELETE FROM users WHERE idUser = :idUser';
+    $sql = 'DELETE FROM post WHERE idpost = :idpost';
 
     $querry = $db->prepare($sql);
 
     $querry->execute([
-    ':idUser'=> $_GET['IdSupr']
+    ':idpost'=> $_GET['IdSuprP']
     ]);
 
     $user = $querry->fetch(PDO::FETCH_ASSOC);
-    echo "Suppression of user confirm; ";
+    echo "Suppression of post confirm; ";
 }
 ?>

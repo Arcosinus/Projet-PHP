@@ -12,7 +12,7 @@ if (empty($_GET['class'])){
     <form><?php
     while (($user = $querry->fetch(PDO::FETCH_ASSOC))) {
         ?>
-        <button><a <?= $p == $user["titlePost"] ? 'class="active"' : ""?> href="index.php?p=<?=$user["titlePost"]?>" > <?=$user["categories"] . ": " . $user["titlePost"] . "-" . substr($user["postContent"], 0, 25) . "..."?> </a></button>
+        <button><a <?= $p == $user["titlePost"] ? 'class="active"' : ""?> href="index.php?p=game&titlePost=<?=$user["titlePost"]?>" > <?=$user["categories"] . ": " . $user["titlePost"] . "-" . substr($user["postContent"], 0, 25) . "..."?> </a></button>
         <?php
         };
         ?>
@@ -31,7 +31,7 @@ else
     <form><?php
     while (($user = $querry->fetch(PDO::FETCH_ASSOC))) {
         ?>
-        <button><a <?= $p == $user["titlePost"] ? 'class="active"' : ""?> href="index.php?p=<?=$user["titlePost"]?>" > <?=$user["categories"] . ": " . $user["titlePost"] . "-" . substr($user["postContent"], 0, 25) . "..."?> </a></button>
+        <button><a <?= $p == $user["titlePost"] ? 'class="active"' : ""?> href="index.php?p=game&titlePost=<?=$user["titlePost"]?>" > <?=$user["categories"] . ": " . $user["titlePost"] . "-" . substr($user["postContent"], 0, 25) . "..."?> </a></button>
         <?php
         };
         ?>
