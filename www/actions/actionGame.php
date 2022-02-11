@@ -41,8 +41,8 @@ require_once '/Users/arxcoz/Downloads/Projet PHP/src/db.php';
         if ($user2 = $querry2->fetch(PDO::FETCH_ASSOC)){
         ?>
         <p> <?=$user2['userName'] . ": " . $user["postContent"]?></p>
-        <button> <a href="index.php?p=game&titlePost=<?=$user['titlePost']?>&up=<?=($user['upVotes']++)?>&idpost=<?=$user['idpost']?>"><?="d:" . $user['upVotes']?></a></button>
-        <button> <a href="index.php?p=game&titlePost=<?=$user['titlePost']?>&down=<?=($user['downVotes']++)?>&idpost=<?=$user['idpost']?>"><?="q:" . $user['downVotes']?></a></button>
+        <button> <a href="index.php?p=game&titlePost=<?=$user['titlePost']?>&up=<?=($user['upVotes']+1)?>&idpost=<?=$user['idpost']?>"><?="d:" . $user['upVotes']?></a></button>
+        <button> <a href="index.php?p=game&titlePost=<?=$user['titlePost']?>&down=<?=($user['downVotes']+1)?>&idpost=<?=$user['idpost']?>"><?="q:" . $user['downVotes']?></a></button>
         <?php
         }
         };
