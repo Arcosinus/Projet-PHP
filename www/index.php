@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="index.css">
 <?php
 
 require_once '../src/init.php';
@@ -5,7 +6,6 @@ require_once '../src/init.php';
 session_start();
 
 ?>
-
 <?php
     include '../src/views/partials/navbar.php'
 ?>
