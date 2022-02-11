@@ -7,9 +7,7 @@
     <title>GameCon Seil</title>
 </head>
 <form>
-    <h2>Profil</h2>
-        <?php
-        include 'actions/actionProfil.php';
-        ?>
-        <button method="get" name="p" value="modif">Modifier</button>
+    <?php
+    include_once 'actions/actionGame.php';
+    ?>
 </form>

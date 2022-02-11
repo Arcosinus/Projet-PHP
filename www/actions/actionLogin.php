@@ -23,6 +23,7 @@ if($user == false){
 foreach ($user as $key => $value) {
     if($key == 'idUser'){
         $_SESSION['idUser'] = $value;
+        $_SESSION['admin'] = $user["ifAdmin"];
         header("Location: /index.php?p=login&successful=1");
     }
 }
